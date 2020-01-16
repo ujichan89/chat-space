@@ -23,26 +23,26 @@ Things you may want to cover:
 
 * ...
 
-#userテーブル
+#usersテーブル
 |Column|Type|Options|
-|name|-------|null: false, foreign_key: true|
+|name|text|null: false, foreign_key: true|
 
 ## Association
--has_many:groups_users
+-has_many:groups, through:groups_users
 -has_many:messege
 
 
-#groupテーブル
+#groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|----|null: false, foreign_key: true|
+|name|text|null: false,  true|
 
 ## Association
--has_many:messege
--has_many:groups_users
+-has_many:messeges　
+-has_many:user,  through:groups_users
 
 
-#messegeテーブル
+#messegesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |user_id|null: false, foreign_key: true|

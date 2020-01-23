@@ -68,3 +68,6 @@ Things you may want to cover:
 ## Association
 - belongs_to :group
 - belongs_to :user
+
+
+<!-- a -->

@@ -1,0 +1,42 @@
+.main
+  .main-header
+    .main-header__box
+      .main-header__box__boxname
+        .a
+          テスト1
+        .b
+          Menber: usersname
+      .main-header__box__edit
+        .edit
+          Edit
+  .main-message
+    .main-message__box
+      .main-message__box__ab
+        .a
+          テスト1
+          .c
+            2686/1/25(sun) 16:13:10
+        .b
+          メッセージが記載されます
+      .main-message__box__de
+        .d
+          テスト2
+          .f
+            2686/1/25(sun) 17:15:10
+        .e
+          メッセージが記載されます2 
+  .main-footer
+    .main-footer__input
+      .main-footer__input__box
+        .zone
+          %input.text_box{:name => "message[content]", :placeholder => "type a message", :type => "text"}/
+          %label{class: "content_btn"}
+            = icon('fas', 'image')
+            %input{type: "file", class: "file"}
+        .send__btn
+          send
+        
+
+
+
+

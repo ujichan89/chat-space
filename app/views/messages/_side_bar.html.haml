@@ -1,0 +1,27 @@
+.side
+  .side-header
+    .side-header__box
+      .side-header__box__boxname
+        username
+      %ul.side-header__box__icon
+        %li.new_gurup
+          = link_to "#", class: "contents__btn" do
+            = icon('far', 'edit')
+        %li.edit
+          = link_to "#", class: "new__btn" do
+            = icon('fas', 'cog')
+
+  .side-gurup
+    .side-gurup__box
+      .side-gurup__box__name1 
+        .a
+          テスト1
+        .b
+          メッセージはありません。
+      .side-gurup__box__name2
+        .c
+          テスト2
+        .d
+          メッセージはないよ
+      
+      

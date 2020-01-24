@@ -2,26 +2,28 @@
   .side-header
     .side-header__box
       .side-header__box__boxname
-        username
+        = current_user.name
       %ul.side-header__box__icon
         %li.new_gurup
           = link_to "#", class: "contents__btn" do
-            = icon('far', 'edit')
+            = icon('fas', 'edit')
         %li.edit
           = link_to "#", class: "new__btn" do
-            = icon('fas', 'cog')
+            = icon('fas', 'cog', class:'icon')
 
   .side-gurup
     .side-gurup__box
       .side-gurup__box__name1 
         .a
           テスト1
+          = icon('fab', 'flag')
         .b
-          メッセージはありません。
       .side-gurup__box__name2
         .c
           テスト2
         .d
           メッセージはないよ
+
+          
       
       

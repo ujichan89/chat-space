@@ -1,0 +1,22 @@
+.side
+  .side-header
+    .side-header__box
+      .side-header__box__boxname
+        = current_user.name
+      %ul.side-header__box__icon
+        = link_to new_group_path do
+          = link_to new_group_path, class: "contents__btn" do
+            = icon('fas', 'edit')
+            
+        %li.edit
+          = link_to "#", class: "new__btn" do
+            = icon('fas', 'cog', class:'icon')
+
+  .side__list
+    - current_user.groups.each do |group|
+      .side__list__group
+        = link_to '#' do
+          .side__list__group__name
+          = group.name
+      .side__list__group__message
+      　うんち

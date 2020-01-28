@@ -1,14 +1,19 @@
 .main
+  = render @messages
+
   .main-header
     .main-header__box
       .main-header__box__boxname
         .a
-          テスト1
+          = @group.name
         .b
-          Menber: usersname
+        - @group.users.each do |user|
+          = user.name
+          
       .main-header__box__edit
         .edit
-          Edit
+          = link_to "Edit",edit_group_path(current_user)
+
   .main-message
     .main-message__box
       .main-message__box__ab
@@ -26,7 +31,9 @@
         .e
           メッセージが記載されます2 
   .main-footer
-    .main-footer__input
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+      .main-footer__input
       .main-footer__input__box
         .zone
           %input.text_box{:name => "message[content]", :placeholder => "type a message", :type => "text"}/
@@ -35,8 +42,3 @@
             %input{type: "file", class: "file"}
         .send__btn
           send
-        
-
-
-
-

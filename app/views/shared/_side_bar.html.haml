@@ -4,12 +4,12 @@
       .side-header__box__boxname
         = current_user.name
       %ul.side-header__box__icon
-        = link_to new_group_path do
+        %li.edit
           = link_to new_group_path, class: "contents__btn" do
             = icon('fas', 'edit')
             
-        %li.edit
-          = link_to "#", class: "new__btn" do
+        %li.cog
+          = link_to  edit_user_path(current_user.id), class: "new__btn" do
             = icon('fas', 'cog', class:'icon')
 
   .side__list

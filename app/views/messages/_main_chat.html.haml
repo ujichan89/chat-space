@@ -1,5 +1,5 @@
 .main
-  = render @messages
+  
 
   .main-header
     .main-header__box
@@ -15,30 +15,16 @@
           = link_to "Edit",edit_group_path(current_user)
 
   .main-message
-    .main-message__box
-      .main-message__box__ab
-        .a
-          テスト1
-          .c
-            2686/1/25(sun) 16:13:10
-        .b
-          メッセージが記載されます
-      .main-message__box__de
-        .d
-          テスト2
-          .f
-            2686/1/25(sun) 17:15:10
-        .e
-          メッセージが記載されます2 
+    = render @messages
+    
   .main-footer
     = form_for [@group, @message] do |f|
-      = f.text_field :content, class: 'form__message', placeholder: 'type a message'
       .main-footer__input
-      .main-footer__input__box
-        .zone
-          %input.text_box{:name => "message[content]", :placeholder => "type a message", :type => "text"}/
-          %label{class: "content_btn"}
-            = icon('fas', 'image')
-            %input{type: "file", class: "file"}
-        .send__btn
-          send
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        = f.label :image, class: 'content_btn' do
+          = icon('fas', 'image')
+          =f.file_field :image, class: 'file'
+      = f.submit 'Send', class: 'form__submit'
+        
+        
+          

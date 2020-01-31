@@ -1,11 +1,6 @@
 Rails.application.routes.draw do
   
   devise_for :users
-<<<<<<< Updated upstream
-  
-
-=======
->>>>>>> Stashed changes
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'groups#index'
   resources :users, only: [:index, :edit, :update]
@@ -13,6 +8,9 @@ Rails.application.routes.draw do
     resources :messages, only: [:index, :create]
     namespace :api do
       resources :messages, only: :index, defaults: { format: 'json' }
+      namespace :api do
+        resources :messages, only: :index, defaults: { format: 'json' }
+      end
     end
   end
 end

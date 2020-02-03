@@ -40,7 +40,7 @@ group :development, :test do
   gem 'byebug', platform: :mri
   gem 'haml-rails'
   # gem 'font-awesome-rails'
-  gem "font-awesome-sass"
+  # gem "font-awesome-sass"
   gem 'devise'
   gem 'carrierwave'
   gem 'mini_magick'
@@ -67,3 +67,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
   gem 'haml-rails'
   gem 'devise'
+  gem 'sassc','~> 2.2.1'
+  gem 'font-awesome-sass'

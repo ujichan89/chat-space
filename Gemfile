@@ -41,9 +41,6 @@ group :development, :test do
   gem 'haml-rails'
   # gem 'font-awesome-rails'
   # gem "font-awesome-sass"
-  gem 'devise'
-  gem 'carrierwave'
-  gem 'mini_magick'
   gem 'rspec-rails', '~> 3.5'
   gem 'rails-controller-testing'
   gem 'factory_bot_rails'
@@ -69,3 +66,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
   gem 'devise'
   gem 'sassc','~> 2.2.1'
   gem 'font-awesome-sass'
+  gem 'carrierwave'
+  gem 'mini_magick'

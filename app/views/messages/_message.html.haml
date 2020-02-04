@@ -1,10 +1,11 @@
 .message
   .main-message__box
     .main-message__box__ab{data: {message: {id: message.id}}}
-      .a
-        = message.user.name
-      .c
-        = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
+      .main-message__box__ab__d
+        .a
+          = message.user.name
+        .c
+          = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
       .b
         - if message.content.present?
           %p.lower-message__content

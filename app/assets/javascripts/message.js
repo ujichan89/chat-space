@@ -5,17 +5,19 @@ $(function(){
       var html = `<div class="message" data-message-id=${message.id}>
         <div class="main-message__box">
           <div class="main-message__box__ab">
-            <div class="a">
-              ${message.user_name}
-            </div>
-            <div class="c">
-              ${message.created_at}
-            </div>
+            <div class="main-message__box__ab__d">
+              <div class="a">
+                ${message.user_name}
+              </div>
+              <div class="c">
+                ${message.created_at}
+              </div>
+            </div>  
             <div class="b">
               <p class="lower-message__content">
                 ${message.content}
               </p>
-            <img src=${message.image}>
+              <img src=${message.image}>
             </div>
           </div>
         </div>
@@ -24,16 +26,18 @@ $(function(){
       var html =`<div class="message" data-message-id=${message.id}>
         <div class="main-message__box">
           <div class="main-message__box__ab">
-            <div class="a">
-            ${message.user_name}
-            </div>
-            <div class="c">
-            ${message.created_at}
+            <div class="main-message__box__ab__d">
+              <div class="a">
+                ${message.user_name}
+              </div>
+              <div class="c">
+                ${message.created_at}
+              </div>
             </div>
             <div class="b">
-            <p class="lower-message__content">
-            ${message.content}
-            </p>
+              <p class="lower-message__content">
+              ${message.content}
+              </p>
             </div>
           </div>
         </div>
